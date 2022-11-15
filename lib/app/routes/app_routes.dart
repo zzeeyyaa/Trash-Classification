@@ -3,8 +3,18 @@ part of 'app_pages.dart';
 
 abstract class Routes {
   Routes._();
+  static const HOME = _Paths.HOME;
+  static const PROFILE = _Paths.PROFILE;
+  static const TRANSACTION = _Paths.TRANSACTION;
+  static const CAMERA_DETECTOR = _Paths.CAMERA_DETECTOR;
+  static const LOGIN = _Paths.LOGIN;
 }
 
 abstract class _Paths {
   _Paths._();
+  static const HOME = '/home';
+  static const PROFILE = '/profile';
+  static const TRANSACTION = '/transaction';
+  static const CAMERA_DETECTOR = '/camera-detector';
+  static const LOGIN = '/login';
 }
