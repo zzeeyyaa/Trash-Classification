@@ -17,14 +17,14 @@ class HomeView extends GetView<HomeController> {
           Padding(
             padding: EdgeInsets.only(left: 30, right: 30, top: 10),
             child: Container(
-              height: 70,
+              height: 60,
               width: Get.width,
               decoration: BoxDecoration(
                 color: Color(0xffCC7A7B),
-                borderRadius: BorderRadius.circular(30),
+                borderRadius: BorderRadius.circular(20),
               ),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Container(
                     height: 40,
