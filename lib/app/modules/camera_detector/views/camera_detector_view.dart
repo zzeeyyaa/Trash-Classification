@@ -9,10 +9,7 @@ class CameraDetectorView extends GetView<CameraDetectorController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('CameraDetectorView'),
-        centerTitle: true,
-      ),
+      backgroundColor: Color(0xffF0EAD2),
       body: Center(
         child: Text(
           'CameraDetectorView is working',

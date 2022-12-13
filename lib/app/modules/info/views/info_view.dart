@@ -10,6 +10,7 @@ class InfoView extends GetView<InfoController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffF0EAD2),
       body: Center(
         child: Text(
           'InfoView is working',

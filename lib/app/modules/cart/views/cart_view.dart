@@ -10,6 +10,7 @@ class CartView extends GetView<CartController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffF0EAD2),
       body: Center(
         child: Text(
           'CartView is working',

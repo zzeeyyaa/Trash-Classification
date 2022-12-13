@@ -10,6 +10,7 @@ class DetailSampahView extends GetView<DetailSampahController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffF0EAD2),
       body: Center(
         child: Text(
           'DetailSampahView is working',

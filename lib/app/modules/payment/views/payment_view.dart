@@ -9,6 +9,7 @@ class PaymentView extends GetView<PaymentController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffF0EAD2),
       appBar: AppBar(
         title: const Text('PaymentView'),
         centerTitle: true,
