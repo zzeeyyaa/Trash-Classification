@@ -91,7 +91,7 @@ class HomeView extends GetView<HomeController> {
           Padding(
             padding: EdgeInsets.only(left: 15, right: 15, top: 10),
             child: Container(
-              height: Get.height * 0.58,
+              height: Get.height * 0.6,
               width: Get.width,
               decoration: BoxDecoration(
                 color: Color(0xffDAD5BF),
