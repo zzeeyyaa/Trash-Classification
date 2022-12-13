@@ -233,7 +233,7 @@ class HomeView extends GetView<HomeController> {
                         width: 40,
                         height: 40,
                         child: IconButton(
-                            onPressed: () {},
+                            onPressed: () => Get.toNamed(Routes.INFO),
                             icon: Image.asset(
                               "assets/buttons/info.png",
                               fit: BoxFit.fill,
@@ -249,7 +249,7 @@ class HomeView extends GetView<HomeController> {
                         width: 40,
                         height: 40,
                         child: IconButton(
-                            onPressed: () {},
+                            onPressed: () => Get.toNamed(Routes.CART),
                             icon: Image.asset(
                               "assets/buttons/cart.png",
                               fit: BoxFit.fill,
