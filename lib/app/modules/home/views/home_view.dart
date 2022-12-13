@@ -162,7 +162,8 @@ class HomeView extends GetView<HomeController> {
                                     height: 50,
                                     width: 50,
                                     child: TextButton(
-                                        onPressed: () {},
+                                        onPressed: () =>
+                                            Get.toNamed(Routes.DETAIL_SAMPAH),
                                         child: Image.asset(
                                           "assets/buttons/next.png",
                                           fit: BoxFit.fill,
@@ -172,7 +173,8 @@ class HomeView extends GetView<HomeController> {
                                     height: 50,
                                     width: 50,
                                     child: IconButton(
-                                        onPressed: () {},
+                                        onPressed: () =>
+                                            Get.toNamed(Routes.PAYMENT),
                                         icon: Image.asset(
                                           "assets/buttons/trash.png",
                                           fit: BoxFit.fill,
