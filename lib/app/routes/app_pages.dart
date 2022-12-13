@@ -6,6 +6,8 @@ import '../modules/cart/bindings/cart_binding.dart';
 import '../modules/cart/views/cart_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/info/bindings/info_binding.dart';
+import '../modules/info/views/info_view.dart';
 import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
 import '../modules/profile/bindings/profile_binding.dart';
@@ -50,6 +52,11 @@ class AppPages {
       name: _Paths.CART,
       page: () => const CartView(),
       binding: CartBinding(),
+    ),
+    GetPage(
+      name: _Paths.INFO,
+      page: () => const InfoView(),
+      binding: InfoBinding(),
     ),
   ];
 }

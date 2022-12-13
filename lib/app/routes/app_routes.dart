@@ -9,6 +9,7 @@ abstract class Routes {
   static const CAMERA_DETECTOR = _Paths.CAMERA_DETECTOR;
   static const LOGIN = _Paths.LOGIN;
   static const CART = _Paths.CART;
+  static const INFO = _Paths.INFO;
 }
 
 abstract class _Paths {
@@ -19,4 +20,5 @@ abstract class _Paths {
   static const CAMERA_DETECTOR = '/camera-detector';
   static const LOGIN = '/login';
   static const CART = '/cart';
+  static const INFO = '/info';
 }
