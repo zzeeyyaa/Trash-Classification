@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import '../../../routes/app_pages.dart';
 import '../controllers/login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
@@ -122,7 +123,7 @@ class LoginView extends GetView<LoginController> {
                     Padding(
                       padding: EdgeInsets.only(top: 15, right: 65, left: 65),
                       child: TextButton(
-                        onPressed: () {},
+                        onPressed: () => Get.offAllNamed(Routes.HOME),
                         child: Image.asset(
                           "assets/buttons/login.png",
                           fit: BoxFit.fitWidth,
@@ -139,7 +140,32 @@ class LoginView extends GetView<LoginController> {
                           fontSize: 18,
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () => Get.defaultDialog(
+                        backgroundColor: Color(0xffCC7A7B),
+                        contentPadding: EdgeInsets.all(20),
+                        titlePadding: EdgeInsets.only(top: 50),
+                        content: Container(
+                          child: Center(
+                            child: Column(
+                              children: [
+                                Image.asset("assets/images/x.png"),
+                                Padding(
+                                  padding: const EdgeInsets.all(20),
+                                  child: Text(
+                                    "This feature isn't work properly",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        fontSize: 18, color: Color(0xffF2E8CF)),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        title: "I'm Sorry",
+                        titleStyle:
+                            TextStyle(fontSize: 24, color: Color(0xffF2E8CF)),
+                      ),
                     ),
                   ],
                 ),
