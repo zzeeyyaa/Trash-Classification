@@ -19,8 +19,9 @@ class MyApp extends StatelessWidget {
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
             return GetMaterialApp(
+              debugShowCheckedModeBanner: false,
               title: "Application",
-              initialRoute: AppPages.INITIAL,
+              initialRoute: Routes.LOGIN,
               getPages: AppPages.routes,
             );
           } else {

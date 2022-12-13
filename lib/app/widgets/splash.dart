@@ -8,14 +8,14 @@ class SplashScreen extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          backgroundColor: Color(0xFFD9D9D9),
+          backgroundColor: Color(0xFFF0EAD2),
           body: Center(
             child: Container(
-                // child: Image.asset(
-                //   "assets/images/splash.png",
-                //   fit: BoxFit.fitWidth,
-                // ),
-                ),
+              child: Image.asset(
+                "assets/images/splash.png",
+                fit: BoxFit.fitWidth,
+              ),
+            ),
           )),
     );
   }
