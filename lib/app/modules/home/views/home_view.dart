@@ -10,7 +10,7 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffF0EAD2),
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
