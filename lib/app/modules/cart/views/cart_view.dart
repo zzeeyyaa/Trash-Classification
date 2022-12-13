@@ -31,8 +31,11 @@ class CartView extends GetView<CartController> {
                     child: Container(
                       height: 40,
                       width: 40,
-                      child: Image.asset(
-                        "assets/buttons/previous.png",
+                      child: TextButton(
+                        onPressed: () => Get.back(),
+                        child: Image.asset(
+                          "assets/buttons/previous.png",
+                        ),
                       ),
                     ),
                   ),
