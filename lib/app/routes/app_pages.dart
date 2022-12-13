@@ -4,6 +4,8 @@ import '../modules/camera_detector/bindings/camera_detector_binding.dart';
 import '../modules/camera_detector/views/camera_detector_view.dart';
 import '../modules/cart/bindings/cart_binding.dart';
 import '../modules/cart/views/cart_view.dart';
+import '../modules/detailSampah/bindings/detail_sampah_binding.dart';
+import '../modules/detailSampah/views/detail_sampah_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/info/bindings/info_binding.dart';
@@ -57,6 +59,11 @@ class AppPages {
       name: _Paths.INFO,
       page: () => const InfoView(),
       binding: InfoBinding(),
+    ),
+    GetPage(
+      name: _Paths.DETAIL_SAMPAH,
+      page: () => const DetailSampahView(),
+      binding: DetailSampahBinding(),
     ),
   ];
 }
