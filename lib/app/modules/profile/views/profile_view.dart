@@ -1295,7 +1295,7 @@ class ProfileView extends GetView<ProfileController> {
                         ),
                         //LOGOUT
                         Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 30),
+                          padding: const EdgeInsets.symmetric(vertical: 25),
                           child: Container(
                             height: 70,
                             width: Get.width * 0.8,
