@@ -120,6 +120,7 @@ class ProfileView extends GetView<ProfileController> {
                                     height: 60,
                                     width: 250,
                                     child: TextField(
+                                      enabled: false,
                                       decoration: InputDecoration(
                                         fillColor: Color(0xffF2E8CF),
                                         filled: true,
@@ -366,6 +367,7 @@ class ProfileView extends GetView<ProfileController> {
                                     height: 60,
                                     width: 250,
                                     child: TextField(
+                                      enabled: false,
                                       decoration: InputDecoration(
                                         fillColor: Color(0xffF2E8CF),
                                         filled: true,
@@ -611,6 +613,7 @@ class ProfileView extends GetView<ProfileController> {
                                     height: 60,
                                     width: 250,
                                     child: TextField(
+                                      enabled: false,
                                       decoration: InputDecoration(
                                         fillColor: Color(0xffF2E8CF),
                                         filled: true,
@@ -857,6 +860,7 @@ class ProfileView extends GetView<ProfileController> {
                                     height: 60,
                                     width: 250,
                                     child: TextField(
+                                      enabled: false,
                                       decoration: InputDecoration(
                                         fillColor: Color(0xffF2E8CF),
                                         filled: true,
@@ -1103,6 +1107,7 @@ class ProfileView extends GetView<ProfileController> {
                                     height: 60,
                                     width: 250,
                                     child: TextField(
+                                      enabled: false,
                                       decoration: InputDecoration(
                                         fillColor: Color(0xffF2E8CF),
                                         filled: true,
