@@ -47,7 +47,7 @@ class LoginView extends GetView<LoginController> {
                 child: Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(top: 80),
+                      padding: EdgeInsets.only(top: 50),
                       child: Text(
                         "Log-in",
                         textAlign: TextAlign.center,
