@@ -1322,7 +1322,7 @@ class ProfileView extends GetView<ProfileController> {
                           height: 70,
                           width: Get.width * 0.8,
                           child: TextButton(
-                            onPressed: () {},
+                            onPressed: () => Get.offAllNamed(Routes.LOGIN),
                             child: Image.asset(
                               "assets/buttons/logout.png",
                               fit: BoxFit.cover,
