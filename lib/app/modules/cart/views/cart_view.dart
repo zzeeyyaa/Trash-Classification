@@ -139,7 +139,8 @@ class CartView extends GetView<CartController> {
                                   height: 50,
                                   width: 50,
                                   child: TextButton(
-                                      onPressed: () {},
+                                      onPressed: () =>
+                                          Get.toNamed(Routes.PAYMENT),
                                       child: Image.asset(
                                         "assets/buttons/y.png",
                                         fit: BoxFit.fill,
@@ -149,7 +150,120 @@ class CartView extends GetView<CartController> {
                                   height: 50,
                                   width: 50,
                                   child: IconButton(
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        showDialog(
+                                          context: context,
+                                          builder: (context) => AlertDialog(
+                                            insetPadding: EdgeInsets.all(10),
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(20),
+                                            ),
+                                            backgroundColor: Color(0xFF79675C),
+                                            content: Container(
+                                              height: Get.height * 0.05,
+                                              width: Get.width * 0.8,
+                                              child: Container(
+                                                height: 60,
+                                                width: 200,
+                                                child: Text(
+                                                  "Are you sure want to delete this item from your cart?",
+                                                  style: TextStyle(
+                                                      color: Color(0xffF2E8CF),
+                                                      fontSize: 18,
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                                ),
+                                              ),
+                                            ),
+                                            actions: [
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    bottom: 5),
+                                                child: Center(
+                                                  child: Container(
+                                                    width: Get.width * 0.8,
+                                                    height: 60,
+                                                    // color: Colors.amber,
+                                                    child: Row(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .spaceBetween,
+                                                      children: [
+                                                        SizedBox(
+                                                          height: 100,
+                                                          width: 140,
+                                                          child: IconButton(
+                                                              onPressed: () =>
+                                                                  Get.back(),
+                                                              icon: Image.asset(
+                                                                "assets/buttons/cancel.png",
+                                                                fit:
+                                                                    BoxFit.fill,
+                                                                width: 140,
+                                                              )),
+                                                        ),
+                                                        SizedBox(
+                                                          height: 100,
+                                                          width: 140,
+                                                          child: IconButton(
+                                                              iconSize: 120,
+                                                              onPressed: () =>
+                                                                  Get.defaultDialog(
+                                                                    backgroundColor:
+                                                                        Color(
+                                                                            0xffCC7A7B),
+                                                                    contentPadding:
+                                                                        EdgeInsets.all(
+                                                                            20),
+                                                                    titlePadding:
+                                                                        EdgeInsets.only(
+                                                                            top:
+                                                                                50),
+                                                                    content:
+                                                                        Container(
+                                                                      child:
+                                                                          Center(
+                                                                        child:
+                                                                            Column(
+                                                                          children: [
+                                                                            Image.asset("assets/images/x.png"),
+                                                                            Padding(
+                                                                              padding: const EdgeInsets.all(20),
+                                                                              child: Text(
+                                                                                "This feature isn't work properly",
+                                                                                textAlign: TextAlign.center,
+                                                                                style: TextStyle(fontSize: 18, color: Color(0xffF2E8CF)),
+                                                                              ),
+                                                                            )
+                                                                          ],
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                    title:
+                                                                        "I'm Sorry",
+                                                                    titleStyle: TextStyle(
+                                                                        fontSize:
+                                                                            24,
+                                                                        color: Color(
+                                                                            0xffF2E8CF)),
+                                                                  ),
+                                                              icon: Image.asset(
+                                                                "assets/buttons/delete.png",
+                                                                fit:
+                                                                    BoxFit.fill,
+                                                                width: 140,
+                                                              )),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                              )
+                                            ],
+                                          ),
+                                        );
+                                      },
                                       icon: Image.asset(
                                         "assets/buttons/n.png",
                                         fit: BoxFit.fill,
