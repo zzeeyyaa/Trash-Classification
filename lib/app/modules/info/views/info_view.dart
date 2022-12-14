@@ -76,18 +76,18 @@ class InfoView extends GetView<InfoController> {
                   Padding(
                     padding: const EdgeInsets.only(bottom: 15),
                     child: Container(
-                      height: 120,
+                      height: 170,
                       width: 120,
                       decoration: BoxDecoration(
                         color: Color(0xff849554),
                         borderRadius: BorderRadius.circular(30),
                       ),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(left: 15),
+                            padding: const EdgeInsets.only(left: 10),
                             child: Container(
                               height: 100,
                               width: 180,
@@ -122,20 +122,17 @@ class InfoView extends GetView<InfoController> {
                               ),
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 5),
-                            child: Container(
-                              height: 100,
-                              width: 100,
-                              decoration: BoxDecoration(
-                                color: Color(0xffF2E8CF),
-                                borderRadius: BorderRadius.circular(25),
-                              ),
+                          Container(
+                            height: 110,
+                            width: 110,
+                            decoration: BoxDecoration(
+                              color: Color(0xffF2E8CF),
+                              borderRadius: BorderRadius.circular(25),
                             ),
                           ),
                           Container(
                             width: 40,
-                            height: 120,
+                            height: 170,
                             // color: Color.fromARGB(255, 97, 97, 97),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
