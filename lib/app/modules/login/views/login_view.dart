@@ -74,23 +74,27 @@ class LoginView extends GetView<LoginController> {
                       child: TextField(
                         // controller: controller.emailU,
                         decoration: InputDecoration(
-                            hintMaxLines: 1,
-                            filled: true,
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30),
-                              borderSide: BorderSide(
-                                color: Color(0xFFADC178),
-                                width: 2,
-                              ),
+                          hintMaxLines: 1,
+                          filled: true,
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(30),
+                            borderSide: BorderSide(
+                              color: Color(0xFFADC178),
+                              width: 2,
                             ),
-                            hintText: 'Email',
-                            hintStyle: TextStyle(color: Color(0xFFA98467)),
-                            contentPadding: EdgeInsets.only(left: 20),
-                            fillColor: Color(0xffF2E8CF),
-                            focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(30),
-                                borderSide: BorderSide(
-                                    color: Color(0xffCC7A7B), width: 2))),
+                          ),
+                          hintText: 'Email',
+                          hintStyle: TextStyle(color: Color(0xFFA98467)),
+                          contentPadding: EdgeInsets.only(left: 20),
+                          fillColor: Color(0xffF2E8CF),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(30),
+                            borderSide: BorderSide(
+                              color: Color(0xffCC7A7B),
+                              width: 2,
+                            ),
+                          ),
+                        ),
                       ),
                     ),
                     Padding(
