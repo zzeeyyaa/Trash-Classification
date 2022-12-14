@@ -79,46 +79,45 @@ class ProfileView extends GetView<ProfileController> {
                   ),
                 ),
                 child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      //fullname
-                      Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(
-                                top: 20, left: 50, right: 50),
-                            child: Container(
-                              height: 30,
-                              width: Get.width,
-                              child: Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  "Fullname",
-                                  style: TextStyle(
-                                    color: Color(0xff6C584C),
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold,
+                  child: Container(
+                    width: Get.width,
+                    height: Get.height * 0.82,
+                    child: Column(
+                      children: [
+                        //fullname
+                        Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  top: 20, left: 50, right: 50),
+                              child: Container(
+                                height: 30,
+                                width: Get.width,
+                                child: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    "Fullname",
+                                    style: TextStyle(
+                                      color: Color(0xff6C584C),
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(
-                              left: 30,
-                              right: 30,
-                            ),
-                            child: Container(
-                              width: Get.width,
+                            Container(
+                              width: Get.width * 0.77,
                               height: 50,
                               decoration: BoxDecoration(
                                   color: Color(0xffF2E8CF),
                                   borderRadius: BorderRadius.circular(30)),
                               child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   SizedBox(
-                                    height: 60,
-                                    width: 250,
+                                    height: 50,
+                                    width: Get.width * 0.55,
                                     child: TextField(
                                       enabled: false,
                                       decoration: InputDecoration(
@@ -325,47 +324,42 @@ class ProfileView extends GetView<ProfileController> {
                                 ],
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                      //email
-                      Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(
-                                top: 10, left: 50, right: 50),
-                            child: Container(
-                              height: 30,
-                              width: Get.width,
-                              child: Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  "E-mail",
-                                  style: TextStyle(
-                                    color: Color(0xff6C584C),
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold,
+                          ],
+                        ),
+                        //email
+                        Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  top: 10, left: 50, right: 50),
+                              child: Container(
+                                height: 30,
+                                width: Get.width,
+                                child: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    "E-mail",
+                                    style: TextStyle(
+                                      color: Color(0xff6C584C),
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(
-                              left: 30,
-                              right: 30,
-                            ),
-                            child: Container(
-                              width: Get.width,
+                            Container(
+                              width: Get.width * 0.77,
                               height: 50,
                               decoration: BoxDecoration(
                                   color: Color(0xffF2E8CF),
                                   borderRadius: BorderRadius.circular(30)),
                               child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   SizedBox(
                                     height: 60,
-                                    width: 250,
+                                    width: Get.width * 0.55,
                                     child: TextField(
                                       enabled: false,
                                       decoration: InputDecoration(
@@ -571,47 +565,42 @@ class ProfileView extends GetView<ProfileController> {
                                 ],
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                      //phoneNumber
-                      Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(
-                                top: 10, left: 50, right: 50),
-                            child: Container(
-                              height: 30,
-                              width: Get.width,
-                              child: Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  "Phone Number",
-                                  style: TextStyle(
-                                    color: Color(0xff6C584C),
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold,
+                          ],
+                        ),
+                        //phoneNumber
+                        Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  top: 10, left: 50, right: 50),
+                              child: Container(
+                                height: 30,
+                                width: Get.width,
+                                child: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    "Phone Number",
+                                    style: TextStyle(
+                                      color: Color(0xff6C584C),
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(
-                              left: 30,
-                              right: 30,
-                            ),
-                            child: Container(
-                              width: Get.width,
+                            Container(
+                              width: Get.width * 0.77,
                               height: 50,
                               decoration: BoxDecoration(
                                   color: Color(0xffF2E8CF),
                                   borderRadius: BorderRadius.circular(30)),
                               child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   SizedBox(
                                     height: 60,
-                                    width: 250,
+                                    width: Get.width * 0.55,
                                     child: TextField(
                                       enabled: false,
                                       decoration: InputDecoration(
@@ -818,47 +807,42 @@ class ProfileView extends GetView<ProfileController> {
                                 ],
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                      //address
-                      Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(
-                                top: 10, left: 50, right: 50),
-                            child: Container(
-                              height: 30,
-                              width: Get.width,
-                              child: Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  "Address",
-                                  style: TextStyle(
-                                    color: Color(0xff6C584C),
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold,
+                          ],
+                        ),
+                        //address
+                        Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  top: 10, left: 50, right: 50),
+                              child: Container(
+                                height: 30,
+                                width: Get.width,
+                                child: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    "Address",
+                                    style: TextStyle(
+                                      color: Color(0xff6C584C),
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(
-                              left: 30,
-                              right: 30,
-                            ),
-                            child: Container(
-                              width: Get.width,
+                            Container(
+                              width: Get.width * 0.77,
                               height: 50,
                               decoration: BoxDecoration(
                                   color: Color(0xffF2E8CF),
                                   borderRadius: BorderRadius.circular(30)),
                               child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   SizedBox(
                                     height: 60,
-                                    width: 250,
+                                    width: Get.width * 0.55,
                                     child: TextField(
                                       enabled: false,
                                       decoration: InputDecoration(
@@ -1065,47 +1049,42 @@ class ProfileView extends GetView<ProfileController> {
                                 ],
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                      //password
-                      Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(
-                                top: 10, left: 50, right: 50),
-                            child: Container(
-                              height: 30,
-                              width: Get.width,
-                              child: Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  "Password",
-                                  style: TextStyle(
-                                    color: Color(0xff6C584C),
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold,
+                          ],
+                        ),
+                        //password
+                        Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  top: 10, left: 50, right: 50),
+                              child: Container(
+                                height: 30,
+                                width: Get.width,
+                                child: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    "Password",
+                                    style: TextStyle(
+                                      color: Color(0xff6C584C),
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(
-                              left: 30,
-                              right: 30,
-                            ),
-                            child: Container(
-                              width: Get.width,
+                            Container(
+                              width: Get.width * 0.77,
                               height: 50,
                               decoration: BoxDecoration(
                                   color: Color(0xffF2E8CF),
                                   borderRadius: BorderRadius.circular(30)),
                               child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   SizedBox(
                                     height: 60,
-                                    width: 250,
+                                    width: Get.width * 0.55,
                                     child: TextField(
                                       enabled: false,
                                       decoration: InputDecoration(
@@ -1312,26 +1291,26 @@ class ProfileView extends GetView<ProfileController> {
                                 ],
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                      //LOGOUT
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 20),
-                        child: Container(
-                          height: 70,
-                          width: Get.width * 0.8,
-                          child: TextButton(
-                            onPressed: () => Get.offAllNamed(Routes.LOGIN),
-                            child: Image.asset(
-                              "assets/buttons/logout.png",
-                              fit: BoxFit.cover,
-                              width: Get.width * 0.8,
+                          ],
+                        ),
+                        //LOGOUT
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 30),
+                          child: Container(
+                            height: 70,
+                            width: Get.width * 0.8,
+                            child: TextButton(
+                              onPressed: () => Get.offAllNamed(Routes.LOGIN),
+                              child: Image.asset(
+                                "assets/buttons/logout.png",
+                                fit: BoxFit.cover,
+                                width: Get.width * 0.8,
+                              ),
                             ),
                           ),
-                        ),
-                      )
-                    ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
