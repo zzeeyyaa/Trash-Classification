@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import '../../../routes/app_pages.dart';
 import '../controllers/payment_controller.dart';
 
 class PaymentView extends GetView<PaymentController> {
@@ -40,7 +41,7 @@ class PaymentView extends GetView<PaymentController> {
                   ),
                   Container(
                     height: 50,
-                    width: 150,
+                    width: Get.width * 0.57,
                     child: Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
@@ -50,6 +51,17 @@ class PaymentView extends GetView<PaymentController> {
                           color: Color(0xffF2E8CF),
                           fontWeight: FontWeight.bold,
                         ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    height: 35,
+                    width: 35,
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: TextButton(
+                        child: Image.asset("assets/buttons/home.png"),
+                        onPressed: () => Get.offAllNamed(Routes.HOME),
                       ),
                     ),
                   ),
@@ -166,6 +178,99 @@ class PaymentView extends GetView<PaymentController> {
             ),
           ),
         ],
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 15),
+        child: Container(
+          width: Get.width,
+          height: Get.height * 0.12,
+          color: Color(0xffDAD5BF),
+          // color: Colors.brown,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              TextButton(
+                child: Container(
+                  height: 50,
+                  width: 120,
+                  decoration: BoxDecoration(
+                    color: Color(0xff6C584C),
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Cancel",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18),
+                    ),
+                  ),
+                ),
+                onPressed: () => Get.back(),
+              ),
+              TextButton(
+                child: Container(
+                  height: 50,
+                  width: 70,
+                  decoration: BoxDecoration(
+                    color: Color(0xff849554),
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  child: Image.asset(
+                    "assets/buttons/cart.png",
+                    width: 50,
+                  ),
+                ),
+                onPressed: () => Get.toNamed(Routes.CART),
+              ),
+              TextButton(
+                child: Container(
+                  height: 50,
+                  width: 120,
+                  decoration: BoxDecoration(
+                    color: Color(0xff6C584C),
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Pay",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18),
+                    ),
+                  ),
+                ),
+                onPressed: () => Get.defaultDialog(
+                  backgroundColor: Color(0xffCC7A7B),
+                  contentPadding: EdgeInsets.all(20),
+                  titlePadding: EdgeInsets.only(top: 50),
+                  content: Container(
+                    child: Center(
+                      child: Column(
+                        children: [
+                          Image.asset("assets/images/x.png"),
+                          Padding(
+                            padding: const EdgeInsets.all(20),
+                            child: Text(
+                              "This feature isn't work properly",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontSize: 18, color: Color(0xffF2E8CF)),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  title: "I'm Sorry",
+                  titleStyle: TextStyle(fontSize: 24, color: Color(0xffF2E8CF)),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
