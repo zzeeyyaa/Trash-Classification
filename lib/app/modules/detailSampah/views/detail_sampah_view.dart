@@ -14,6 +14,7 @@ class DetailSampahView extends GetView<DetailSampahController> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
+          //judul nama sampah
           Padding(
             padding: EdgeInsets.only(left: 30, right: 30, top: 10),
             child: Container(
@@ -23,74 +24,54 @@ class DetailSampahView extends GetView<DetailSampahController> {
                 color: Color(0xffCC7A7B),
                 borderRadius: BorderRadius.circular(20),
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Container(
-                    height: 40,
-                    width: 40,
-                    child: Image.asset(
-                      "assets/buttons/previous.png",
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Container(
+                      height: 40,
+                      width: 40,
+                      child: TextButton(
+                        child: Image.asset(
+                          "assets/buttons/previous.png",
+                        ),
+                        onPressed: () => Get.back(),
+                      ),
                     ),
-                  ),
-                  Container(
-                    height: 50,
-                    width: 150,
-                    child: Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        "Nama Jenis Sampah",
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Color(0xffF2E8CF),
-                          fontWeight: FontWeight.bold,
+                    Container(
+                      height: 50,
+                      width: Get.width * 0.6,
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "Nama Jenis Sampah",
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Color(0xffF2E8CF),
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Container(
-                    height: 40,
-                    width: 40,
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: Image.asset("assets/buttons/trash.png"),
+                    Container(
+                      height: 35,
+                      width: 35,
+                      child: IconButton(
+                        onPressed: () => Get.toNamed(Routes.PAYMENT),
+                        icon: Image.asset("assets/buttons/trash.png"),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),
-          Padding(
-            padding: EdgeInsets.only(left: 40, right: 40, top: 10),
-            child: Container(
-              height: 50,
-              width: Get.width,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Mau buang sampah?",
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xff6C584C),
-                    ),
-                  ),
-                  Text(
-                    "Pilih jenis sampahmu",
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Color(0xff6C584C),
-                    ),
-                  )
-                ],
-              ),
-            ),
-          ),
+          //deskripsi sampah
           Padding(
             padding: EdgeInsets.only(left: 15, right: 15, top: 10),
             child: Container(
-              height: Get.height * 0.6,
+              height: Get.height * 0.7,
               width: Get.width,
               decoration: BoxDecoration(
                 color: Color(0xffDAD5BF),
@@ -99,93 +80,38 @@ class DetailSampahView extends GetView<DetailSampahController> {
                   topRight: Radius.circular(30),
                 ),
               ),
-              child: ListView(
-                padding: EdgeInsets.all(15),
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 15),
-                    child: Container(
-                      height: 100,
-                      width: 120,
-                      decoration: BoxDecoration(
-                        color: Color(0xff849554),
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            height: 85,
-                            width: 85,
-                            decoration: BoxDecoration(
-                              color: Color(0xffF2E8CF),
-                              borderRadius: BorderRadius.circular(25),
-                            ),
+              child: SingleChildScrollView(
+                padding: EdgeInsets.all(20),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          height: 135,
+                          width: 135,
+                          decoration: BoxDecoration(
+                            color: Color(0xff849554),
+                            borderRadius: BorderRadius.circular(30),
                           ),
-                          Container(
-                            height: 50,
-                            width: 130,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Sampah Kardus",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color(0xffF2E8CF),
-                                  ),
-                                ),
-                                Text(
-                                  "Rp. 2000/Kg",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                    color: Color(0xffF2E8CF),
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(right: 10),
-                            child: Container(
-                              width: 50,
-                              height: 100,
-                              child: Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  SizedBox(
-                                    height: 50,
-                                    width: 50,
-                                    child: TextButton(
-                                        onPressed: () {},
-                                        child: Image.asset(
-                                          "assets/buttons/next.png",
-                                          fit: BoxFit.fill,
-                                        )),
-                                  ),
-                                  SizedBox(
-                                    height: 50,
-                                    width: 50,
-                                    child: IconButton(
-                                        onPressed: () {},
-                                        icon: Image.asset(
-                                          "assets/buttons/trash.png",
-                                          fit: BoxFit.fill,
-                                        )),
-                                  )
-                                ],
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
+                        ),
+                        Container(
+                          height: 135,
+                          width: Get.width * 0.45,
+                          color: Colors.amber,
+                        ),
+                      ],
                     ),
-                  ),
-                ],
+                    Padding(
+                      padding: EdgeInsets.only(top: 20),
+                      child: Container(
+                        height: Get.height * 0.5,
+                        width: Get.width * 0.9,
+                        color: Colors.blue,
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
           ),

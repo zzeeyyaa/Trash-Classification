@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
             return GetMaterialApp(
               debugShowCheckedModeBanner: false,
               title: "Application",
-              initialRoute: Routes.PAYMENT,
+              initialRoute: Routes.DETAIL_SAMPAH,
               getPages: AppPages.routes,
             );
           } else {
