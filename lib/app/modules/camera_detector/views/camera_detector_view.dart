@@ -1,6 +1,9 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 
 import '../../../routes/app_pages.dart';
 import '../controllers/camera_detector_controller.dart';
@@ -81,6 +84,52 @@ class CameraDetectorView extends GetView<CameraDetectorController> {
                   topRight: Radius.circular(30),
                 ),
               ),
+              child: SingleChildScrollView(
+                  child: Obx(
+                () => controller.selectedImagePath == ""
+                    ? Padding(
+                        padding: const EdgeInsets.all(30),
+                        child: Center(
+                            child: const Text(
+                          "Select Image ! Please !",
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.brown,
+                              fontWeight: FontWeight.bold),
+                        )),
+                      )
+                    : Container(
+                        width: Get.width,
+                        height: Get.height * 0.75,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 30),
+                              child: Container(
+                                height: Get.height * 0.035,
+                                width: Get.width,
+                                child: Center(
+                                  child: Text(
+                                    "TADA !!!",
+                                    style: TextStyle(
+                                        color: Colors.brown,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Image.file(
+                              File(controller.selectedImagePath.value),
+                              height: Get.height * 0.6,
+                              width: Get.width * 0.8,
+                            ),
+                          ],
+                        ),
+                      ),
+              )),
             ),
           ),
         ],
@@ -123,9 +172,14 @@ class CameraDetectorView extends GetView<CameraDetectorController> {
                     color: Color(0xff849554),
                     borderRadius: BorderRadius.circular(30),
                   ),
-                  child: Image.asset(
-                    "assets/buttons/camera.png",
-                    width: 50,
+                  child: TextButton(
+                    child: Image.asset(
+                      "assets/buttons/camera.png",
+                      width: 50,
+                    ),
+                    onPressed: () {
+                      controller.getImage(ImageSource.camera);
+                    },
                   ),
                 ),
                 onPressed: () => Get.defaultDialog(
@@ -172,31 +226,9 @@ class CameraDetectorView extends GetView<CameraDetectorController> {
                     ),
                   ),
                 ),
-                onPressed: () => Get.defaultDialog(
-                  backgroundColor: Color(0xffCC7A7B),
-                  contentPadding: EdgeInsets.all(20),
-                  titlePadding: EdgeInsets.only(top: 50),
-                  content: Container(
-                    child: Center(
-                      child: Column(
-                        children: [
-                          Image.asset("assets/images/x.png"),
-                          Padding(
-                            padding: const EdgeInsets.all(20),
-                            child: Text(
-                              "This feature isn't work properly",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  fontSize: 18, color: Color(0xffF2E8CF)),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                  title: "I'm Sorry",
-                  titleStyle: TextStyle(fontSize: 24, color: Color(0xffF2E8CF)),
-                ),
+                onPressed: () {
+                  controller.getImage(ImageSource.gallery);
+                },
               ),
             ],
           ),

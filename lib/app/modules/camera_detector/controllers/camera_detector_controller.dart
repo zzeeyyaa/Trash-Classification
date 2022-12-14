@@ -1,34 +1,25 @@
-import 'dart:html';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:flutter_image_compress/flutter_image_compress.dart';
 
 class CameraDetectorController extends GetxController {
+  final count = 0.obs;
+
   var selectedImagePath = ''.obs;
   var selectedImageSize = ''.obs;
 
+  //untuk mendapatkan image
   void getImage(ImageSource imageSource) async {
-    final pickedFile = await ImagePicker().getImage(source: imageSource);
-    if (pickedFile != null) {
-      //store the path of selected image path
-      selectedImagePath.value = pickedFile.path;
-      selectedImageSize.value =
-          ((File(selectedImagePath.value)).lengthSync() / 1024 / 1024)
-                  .toStringAsFixed(2) +
-              " Mb";
+    print(">>>" + imageSource.name);
+
+    final image = await ImagePicker().getImage(source: imageSource);
+    if (image == null) {
+      Get.snackbar("title", "Tidak ada gambar");
     } else {
-      //when user doesnt select any image
-      Get.snackbar('Error', 'No image selected',
-          snackPosition: SnackPosition.BOTTOM,
-          backgroundColor: Colors.red,
-          colorText: Colors.white);
+      selectedImagePath.value = image.path;
     }
   }
 
-  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
